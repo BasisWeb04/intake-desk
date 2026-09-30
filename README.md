@@ -12,7 +12,7 @@ A chat intake and dispatch board for a fictional plumbing company. The intake tu
 
 ## Live demo
 
-Live demo: (link added at publish)
+Live demo: https://intake-desk-ten.vercel.app
 
 ## Run it
 
