@@ -2,6 +2,10 @@
 
 A chat intake and dispatch board for a fictional plumbing company. The intake turns free-text customer messages into a structured job ticket, and hard-coded safety rules take over whenever a message describes a gas, carbon monoxide or water-near-electrical hazard.
 
+**Live demo:** https://intake-desk-ten.vercel.app (fictional data)
+
+![Intake Desk: a customer reports a gas smell, the safety rule answers first and the ticket is marked Emergency: safety](docs/screenshot.png)
+
 ## What this demonstrates
 
 - **Safety rules that no extractor can override.** `processMessage` runs `detectSafety` on every message before any extractor is called. The machine re-validates every extraction, and no extractor field can express `emergency-safety`. Tests cover all three points, including a hostile extractor.
@@ -114,8 +118,6 @@ The adapter is enabled only when `ANTHROPIC_API_KEY` is set on the server (see `
 - `eval-runner.test.ts` (4): the results file is written with date, table and misses; scoring rules; a malformed cases file is refused; and the real set holds at least 30 cases with 100 percent safety recall
 - `eval-pin.test.ts` (3): runs the eval and pins the published numbers (279 of 287 overall, safety recall 17 of 17, 0 false flags, authored 99.0 percent, held-out 93.2 percent), and checks that this README and `evals/RESULTS.md` quote the same numbers
 - `llm-extractor.test.ts` (3): the LLM label on success, and fallback on 501, 502, network failure and off-schema output
-
-Removing gas detection makes 19 of these tests fail. This was checked, to confirm the suite can catch a safety regression.
 
 ## Eval results (rules engine)
 
