@@ -112,7 +112,7 @@ export function IntakeDesk() {
             </label>
             <label className="flex items-center gap-1.5">
               <input type="radio" name="engine" checked={engine === "llm"} onChange={() => setEngine("llm")} />
-              LLM, falls back to rules
+              LLM (optional), falls back to rules
             </label>
           </fieldset>
         </div>
@@ -211,8 +211,8 @@ export function IntakeDesk() {
             ))}
           </ul>
           <p className="mt-2 text-muted">
-            Callback numbers must be in the fictional 555-0100 to 555-0199 range. LLM mode calls /api/extract; with no server
-            key it returns 501 and each turn is answered by the rules engine instead, as the label under each reply shows.
+            Callback numbers must be in the fictional 555-0100 to 555-0199 range. LLM mode is optional and tested only against a
+            mocked API. It calls /api/extract; with no server key it returns 501 and each turn is answered by the rules engine instead, as the label under each reply shows.
           </p>
         </section>
       </aside>

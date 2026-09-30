@@ -2,7 +2,7 @@
   "name": "intake-desk",
   "version": "1.0.0",
   "private": true,
-  "description": "Intake Desk: AI job intake for a service business (demo with fictional data).",
+  "description": "Intake Desk: job intake with safety routing, a rules engine and an optional LLM adapter (demo with fictional data).",
   "license": "MIT",
   "author": "Ethan Chacko",
   "engines": {

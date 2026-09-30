@@ -1,4 +1,4 @@
-# Intake Desk: AI job intake for a service business
+# Intake Desk: job intake with safety routing, a rules engine and an optional LLM adapter
 
 A chat intake and dispatch board for a fictional plumbing company. The intake turns free-text customer messages into a structured job ticket, and hard-coded safety rules take over whenever a message describes a gas, carbon monoxide or water-near-electrical hazard.
 
@@ -19,7 +19,7 @@ Live demo: https://intake-desk-ten.vercel.app
 ```
 npm install
 npm run dev        # http://localhost:3000
-npm test           # vitest, 160 tests
+npm test           # vitest, 163 tests
 npm run eval       # scores the rules engine, writes evals/RESULTS.md
 npm run typecheck
 npm run build
@@ -96,7 +96,7 @@ The adapter is enabled only when `ANTHROPIC_API_KEY` is set on the server (see `
 
 ## Tests
 
-`npm test` runs 160 Vitest tests in 8 files:
+`npm test` runs 163 Vitest tests in 9 files:
 
 - `safety.test.ts` (84):
   - every safety case in the eval set routes
@@ -112,6 +112,7 @@ The adapter is enabled only when `ANTHROPIC_API_KEY` is set on the server (see `
 - `llm-adapter.test.ts` (9): valid tool output, the request shape (headers, forced tool choice, schema, model override), three malformed-output cases, HTTP error, network error, missing key (fetch never called), and the default model
 - `store-schema.test.ts` (10): localStorage round trip, corrupt storage, dispatch sort order, and schema acceptance and rejection
 - `eval-runner.test.ts` (4): the results file is written with date, table and misses; scoring rules; a malformed cases file is refused; and the real set holds at least 30 cases with 100 percent safety recall
+- `eval-pin.test.ts` (3): runs the eval and pins the published numbers (279 of 287 overall, safety recall 17 of 17, 0 false flags, authored 99.0 percent, held-out 93.2 percent), and checks that this README and `evals/RESULTS.md` quote the same numbers
 - `llm-extractor.test.ts` (3): the LLM label on success, and fallback on 501, 502, network failure and off-schema output
 
 Removing gas detection makes 19 of these tests fail. This was checked, to confirm the suite can catch a safety regression.
