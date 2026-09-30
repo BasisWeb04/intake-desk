@@ -1,0 +1,956 @@
+[
+  {
+    "id": "c01",
+    "text": "Kitchen sink is completely clogged, water won't go down at all. I'm in Brassmill. Tomorrow morning works, call 406-555-0142.",
+    "tags": [
+      "plain"
+    ],
+    "expected": {
+      "serviceType": "clog",
+      "urgency": "this-week",
+      "neighborhood": "Brassmill",
+      "timeWindow": "morning",
+      "phone": "4065550142",
+      "safety": null
+    }
+  },
+  {
+    "id": "c02",
+    "text": "hi my toilet is leeking at the base, live in alder flats, no rush, afternoons are best. 312 555 0107",
+    "tags": [
+      "typo"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": "flexible",
+      "neighborhood": "Alder Flats",
+      "timeWindow": "afternoon",
+      "phone": "3125550107",
+      "safety": null
+    }
+  },
+  {
+    "id": "c03",
+    "text": "No hot water since last night. Water heater is maybe 12 years old. Cinder Hollow 99993. Need someone today if possible, (503) 555-0119",
+    "tags": [
+      "plain"
+    ],
+    "expected": {
+      "serviceType": "water-heater",
+      "urgency": "today",
+      "neighborhood": "Cinder Hollow",
+      "timeWindow": null,
+      "phone": "5035550119",
+      "safety": null
+    }
+  },
+  {
+    "id": "c04",
+    "text": "PIPE BURST IN BASEMENT WATER EVERYWHERE!!! foxglove terrace 7205550163",
+    "tags": [
+      "caps",
+      "emergency"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": "emergency",
+      "neighborhood": "Foxglove Terrace",
+      "timeWindow": null,
+      "phone": "7205550163",
+      "safety": null
+    }
+  },
+  {
+    "id": "c05",
+    "text": "sewage coming up through the basement floor drain and the tub, smells awful. Gantry Yard. please come asap 206.555.0188",
+    "tags": [
+      "emergency",
+      "near-miss"
+    ],
+    "expected": {
+      "serviceType": "sewer",
+      "urgency": "emergency",
+      "neighborhood": "Gantry Yard",
+      "timeWindow": "asap",
+      "phone": "2065550188",
+      "safety": null
+    }
+  },
+  {
+    "id": "c06",
+    "text": "I'd like to get a new faucet installed in the master bath. Dovecote Park, whenever is fine. 415-555-0133",
+    "tags": [
+      "plain"
+    ],
+    "expected": {
+      "serviceType": "fixture-install",
+      "urgency": "flexible",
+      "neighborhood": "Dovecote Park",
+      "timeWindow": "anytime",
+      "phone": "4155550133",
+      "safety": null
+    }
+  },
+  {
+    "id": "c07",
+    "text": "garbage disposal replacement, estuary bend, weekday evenings after 5, 617 555 0150, not urgent",
+    "tags": [
+      "terse"
+    ],
+    "expected": {
+      "serviceType": "fixture-install",
+      "urgency": "flexible",
+      "neighborhood": "Estuary Bend",
+      "timeWindow": "evening",
+      "phone": "6175550150",
+      "safety": null
+    }
+  },
+  {
+    "id": "c08",
+    "text": "Shower drains really slow. Harrow Glen",
+    "tags": [
+      "terse",
+      "partial"
+    ],
+    "expected": {
+      "serviceType": "clog",
+      "urgency": null,
+      "neighborhood": "Harrow Glen",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c09",
+    "text": "Can you run a gas line to my new range? No smell or anything, just a new install. Brassmill, next week is fine.",
+    "tags": [
+      "near-miss"
+    ],
+    "expected": {
+      "serviceType": "gas-line",
+      "urgency": "flexible",
+      "neighborhood": "Brassmill",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c10",
+    "text": "gas water heater pilot is out, no smell. Alder Flats, 406-555-0171, tomorrow afternoon",
+    "tags": [
+      "near-miss"
+    ],
+    "expected": {
+      "serviceType": "water-heater",
+      "urgency": "this-week",
+      "neighborhood": "Alder Flats",
+      "timeWindow": "afternoon",
+      "phone": "4065550171",
+      "safety": null
+    }
+  },
+  {
+    "id": "c11",
+    "text": "Electric water heater is leaking from the bottom, small puddle. Cinder Hollow. this week sometime",
+    "tags": [
+      "near-miss"
+    ],
+    "expected": {
+      "serviceType": "water-heater",
+      "urgency": "this-week",
+      "neighborhood": "Cinder Hollow",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c12",
+    "text": "the dishwasher drain outlet hose is leaking under the sink, 99995",
+    "tags": [
+      "near-miss",
+      "code"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": null,
+      "neighborhood": "Estuary Bend",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c13",
+    "text": "Toilet keeps hissing and running all night. Gantry yard. evenings are best 971-555-0104",
+    "tags": [
+      "near-miss",
+      "other"
+    ],
+    "expected": {
+      "serviceType": "other",
+      "urgency": null,
+      "neighborhood": "Gantry Yard",
+      "timeWindow": "evening",
+      "phone": "9715550104",
+      "safety": null
+    }
+  },
+  {
+    "id": "c14",
+    "text": "no gas smell at all, the water heater just makes a popping noise. Dovecote park. flexible",
+    "tags": [
+      "near-miss"
+    ],
+    "expected": {
+      "serviceType": "water-heater",
+      "urgency": "flexible",
+      "neighborhood": "Dovecote Park",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c15",
+    "text": "Basement floor drain smells like sewage and backs up when the washer runs. Harrow Glen 99998. Saturday morning?  503-555-0126",
+    "tags": [
+      "near-miss"
+    ],
+    "expected": {
+      "serviceType": "sewer",
+      "urgency": "this-week",
+      "neighborhood": "Harrow Glen",
+      "timeWindow": "morning",
+      "phone": "5035550126",
+      "safety": null
+    }
+  },
+  {
+    "id": "c16",
+    "text": "Leaky kitchen faucet. I'm over in Kestrel Point. 406-555-0190",
+    "tags": [
+      "out-of-area"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": null,
+      "neighborhood": "Kestrel Point",
+      "timeWindow": null,
+      "phone": "4065550190",
+      "safety": null
+    }
+  },
+  {
+    "id": "c17",
+    "text": "Do you guys come out to Lantern Bay? Need a toilet installed, 99999",
+    "tags": [
+      "out-of-area"
+    ],
+    "expected": {
+      "serviceType": "fixture-install",
+      "urgency": null,
+      "neighborhood": "Lantern Bay",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c18",
+    "text": "clogged main sewer line, roots probably. north quarry area. this week",
+    "tags": [
+      "out-of-area",
+      "multi-issue"
+    ],
+    "expected": {
+      "serviceType": "sewer",
+      "urgency": "this-week",
+      "neighborhood": "North Quarry",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c19",
+    "text": "Two things: the bathroom sink drips constantly and the tub is clogged. Foxglove Terrace, sometime next week, mornings.",
+    "tags": [
+      "multi-issue"
+    ],
+    "expected": {
+      "serviceType": "clog",
+      "urgency": "flexible",
+      "neighborhood": "Foxglove Terrace",
+      "timeWindow": "morning",
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c20",
+    "text": "Water heater is leaking and the kitchen drain is slow too. Brassmill. Today please, afternoon. 206 555 0111",
+    "tags": [
+      "multi-issue"
+    ],
+    "expected": {
+      "serviceType": "water-heater",
+      "urgency": "today",
+      "neighborhood": "Brassmill",
+      "timeWindow": "afternoon",
+      "phone": "2065550111",
+      "safety": null
+    }
+  },
+  {
+    "id": "c21",
+    "text": "my toliet is cloged and overflowing, harow glen, asap",
+    "tags": [
+      "typo"
+    ],
+    "expected": {
+      "serviceType": "clog",
+      "urgency": "today",
+      "neighborhood": "Harrow Glen",
+      "timeWindow": "asap",
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c22",
+    "text": "watr heater not heating, dovcote park, tomorow evening 312-555-0145",
+    "tags": [
+      "typo"
+    ],
+    "expected": {
+      "serviceType": "water-heater",
+      "urgency": "this-week",
+      "neighborhood": "Dovecote Park",
+      "timeWindow": "evening",
+      "phone": "3125550145",
+      "safety": null
+    }
+  },
+  {
+    "id": "c23",
+    "text": "Need a new toilet put in, the old one cracked. alder flats. Mon or Tue afternoon. 720-555-0199",
+    "tags": [
+      "plain"
+    ],
+    "expected": {
+      "serviceType": "fixture-install",
+      "urgency": "this-week",
+      "neighborhood": "Alder Flats",
+      "timeWindow": "afternoon",
+      "phone": "7205550199",
+      "safety": null
+    }
+  },
+  {
+    "id": "c24",
+    "text": "There's water dripping through my ceiling from the upstairs bathroom. Estuary Bend. urgent.",
+    "tags": [
+      "plain"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": "today",
+      "neighborhood": "Estuary Bend",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c25",
+    "text": "clogged toilet",
+    "tags": [
+      "terse",
+      "partial"
+    ],
+    "expected": {
+      "serviceType": "clog",
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c26",
+    "text": "Hi, I think my sump pump died and there's standing water in the basement. Gantry Yard, 99997. Please call 971 555 0122 as soon as you can.",
+    "tags": [
+      "other"
+    ],
+    "expected": {
+      "serviceType": "other",
+      "urgency": "today",
+      "neighborhood": "Gantry Yard",
+      "timeWindow": "asap",
+      "phone": "9715550122",
+      "safety": null
+    }
+  },
+  {
+    "id": "c27",
+    "text": "Outdoor spigot is leaking, not a big deal. Cinder Hollow. Any time next week works.",
+    "tags": [
+      "plain"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": "flexible",
+      "neighborhood": "Cinder Hollow",
+      "timeWindow": "anytime",
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c28",
+    "text": "Shower valve needs replacing, it's stuck. Foxglove. Saturday or Sunday, all day is fine. 415 555 0167",
+    "tags": [
+      "plain"
+    ],
+    "expected": {
+      "serviceType": "fixture-install",
+      "urgency": "this-week",
+      "neighborhood": "Foxglove Terrace",
+      "timeWindow": "anytime",
+      "phone": "4155550167",
+      "safety": null
+    }
+  },
+  {
+    "id": "c29",
+    "text": "+1 (503) 555-0138 is my cell. Tub won't drain. Brassmill.",
+    "tags": [
+      "phone-format"
+    ],
+    "expected": {
+      "serviceType": "clog",
+      "urgency": null,
+      "neighborhood": "Brassmill",
+      "timeWindow": null,
+      "phone": "5035550138",
+      "safety": null
+    }
+  },
+  {
+    "id": "c30",
+    "text": "sink leaking, 123-456-7890, Harrow Glen",
+    "tags": [
+      "phone-invalid"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": null,
+      "neighborhood": "Harrow Glen",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "c31",
+    "text": "emergency!! no water coming out of any tap and I hear water running in the wall. Dovecote Park",
+    "tags": [
+      "emergency"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": "emergency",
+      "neighborhood": "Dovecote Park",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "s01",
+    "text": "I smell gas in the kitchen near the stove. Brassmill.",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "gas"
+    }
+  },
+  {
+    "id": "s02",
+    "text": "theres a hissing noise coming from the gas line behind the dryer",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "gas"
+    }
+  },
+  {
+    "id": "s03",
+    "text": "Our carbon monoxide alarm is going off and the water heater is in the same room",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "carbon-monoxide"
+    }
+  },
+  {
+    "id": "s04",
+    "text": "CO detector beeping nonstop in basement where the furnace and water heater are",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "carbon-monoxide"
+    }
+  },
+  {
+    "id": "s05",
+    "text": "Water is leaking onto the electrical panel in the garage",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "water-electrical"
+    }
+  },
+  {
+    "id": "s06",
+    "text": "the basement is flooding and the water is getting close to the outlets",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "water-electrical"
+    }
+  },
+  {
+    "id": "s07",
+    "text": "smells like rotten eggs by the water heater, is that bad?",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "gas"
+    }
+  },
+  {
+    "id": "s08",
+    "text": "i think i smel gass, not sure, also my sink is clogged. alder flats",
+    "tags": [
+      "safety",
+      "typo",
+      "multi-issue"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "gas"
+    }
+  },
+  {
+    "id": "s09",
+    "text": "Toilet overflowed and water ran down the wall into the breaker box",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "water-electrical"
+    }
+  },
+  {
+    "id": "s10",
+    "text": "Not sure if it's gas but something smells weird near the meter",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "gas"
+    }
+  },
+  {
+    "id": "s11",
+    "text": "carbon monoxide detector went off twice tonight",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "carbon-monoxide"
+    }
+  },
+  {
+    "id": "s12",
+    "text": "Water heater leaking and there are sparks from the socket next to it",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "water-electrical"
+    }
+  },
+  {
+    "id": "s13",
+    "text": "Kitchen reeks of gas. Harrow Glen. Please hurry",
+    "tags": [
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "gas"
+    }
+  },
+  {
+    "id": "h01",
+    "text": "Bathroom sink is backed up and gurgling. We are at 99991. Could someone swing by Thursday? 541-555-0112",
+    "tags": [
+      "holdout",
+      "code"
+    ],
+    "expected": {
+      "serviceType": "clog",
+      "urgency": "this-week",
+      "neighborhood": "Alder Flats",
+      "timeWindow": null,
+      "phone": "5415550112",
+      "safety": null
+    }
+  },
+  {
+    "id": "h02",
+    "text": "The pipe under the kitchen sink split and is spraying water, I shut the valve but need help today. Gantry Yard",
+    "tags": [
+      "holdout"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": "today",
+      "neighborhood": "Gantry Yard",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "h03",
+    "text": "Hot water runs out after 5 minutes. Brassmill. Evenings only, I work days. (919) 555-0184",
+    "tags": [
+      "holdout"
+    ],
+    "expected": {
+      "serviceType": "water-heater",
+      "urgency": null,
+      "neighborhood": "Brassmill",
+      "timeWindow": "evening",
+      "phone": "9195550184",
+      "safety": null
+    }
+  },
+  {
+    "id": "h04",
+    "text": "Looking for a quote to swap our old tub for a walk-in shower. No timeline yet. Harrow Glen.",
+    "tags": [
+      "holdout"
+    ],
+    "expected": {
+      "serviceType": "fixture-install",
+      "urgency": "flexible",
+      "neighborhood": "Harrow Glen",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "h05",
+    "text": "Our yard has a soggy patch and it smells like sewer near the cleanout. Estuary Bend, sometime this week.",
+    "tags": [
+      "holdout",
+      "near-miss"
+    ],
+    "expected": {
+      "serviceType": "sewer",
+      "urgency": "this-week",
+      "neighborhood": "Estuary Bend",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "h06",
+    "text": "Kitchen faucet wont stop dripping, drives me nuts lol. cinder hollow 99993 whenever",
+    "tags": [
+      "holdout",
+      "terse"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": "flexible",
+      "neighborhood": "Cinder Hollow",
+      "timeWindow": "anytime",
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "h07",
+    "text": "Toilet is plugged again, plunger not working. Dovecote. Before noon tomorrow if you can. 206-555-0177",
+    "tags": [
+      "holdout"
+    ],
+    "expected": {
+      "serviceType": "clog",
+      "urgency": "this-week",
+      "neighborhood": "Dovecote Park",
+      "timeWindow": "morning",
+      "phone": "2065550177",
+      "safety": null
+    }
+  },
+  {
+    "id": "h08",
+    "text": "We need a gas hookup for a new dryer. Foxglove Terrace.",
+    "tags": [
+      "holdout",
+      "near-miss"
+    ],
+    "expected": {
+      "serviceType": "gas-line",
+      "urgency": null,
+      "neighborhood": "Foxglove Terrace",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "h09",
+    "text": "Main line backing up into the basement shower, 3 drains affected. Brassmill, please send someone right now",
+    "tags": [
+      "holdout",
+      "emergency"
+    ],
+    "expected": {
+      "serviceType": "sewer",
+      "urgency": "emergency",
+      "neighborhood": "Brassmill",
+      "timeWindow": "asap",
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "h10",
+    "text": "Leak in the ceiling below the upstairs toilet, it is bad, dripping fast. North Quarry.",
+    "tags": [
+      "holdout",
+      "out-of-area"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": null,
+      "neighborhood": "North Quarry",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "h11",
+    "text": "Water heater is making a rumbling sound and leaking a little, 99996, flexible on timing, afternoons preferred",
+    "tags": [
+      "holdout",
+      "code"
+    ],
+    "expected": {
+      "serviceType": "water-heater",
+      "urgency": "flexible",
+      "neighborhood": "Foxglove Terrace",
+      "timeWindow": "afternoon",
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "h12",
+    "text": "tankless unit throws an error code and no hot water, need it fixed by tmrw, 971 555 0158, gantry yard",
+    "tags": [
+      "holdout",
+      "terse"
+    ],
+    "expected": {
+      "serviceType": "water-heater",
+      "urgency": "this-week",
+      "neighborhood": "Gantry Yard",
+      "timeWindow": null,
+      "phone": "9715550158",
+      "safety": null
+    }
+  },
+  {
+    "id": "h13",
+    "text": "Gas stove burner will not light, no smell of gas. Brassmill.",
+    "tags": [
+      "holdout",
+      "near-miss",
+      "other"
+    ],
+    "expected": {
+      "serviceType": "other",
+      "urgency": null,
+      "neighborhood": "Brassmill",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "h14",
+    "text": "Outlet pipe on the water softener is dripping. Cinder Hollow.",
+    "tags": [
+      "holdout",
+      "near-miss"
+    ],
+    "expected": {
+      "serviceType": "leak",
+      "urgency": null,
+      "neighborhood": "Cinder Hollow",
+      "timeWindow": null,
+      "phone": null,
+      "safety": null
+    }
+  },
+  {
+    "id": "hs1",
+    "text": "There is a strong odor of natural gas in the laundry room",
+    "tags": [
+      "holdout",
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "gas"
+    }
+  },
+  {
+    "id": "hs2",
+    "text": "our carbon-monoxide detector is chirping and my kids feel dizzy",
+    "tags": [
+      "holdout",
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "carbon-monoxide"
+    }
+  },
+  {
+    "id": "hs3",
+    "text": "Water pooling around the fuse box in the basement after the heater leaked",
+    "tags": [
+      "holdout",
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "water-electrical"
+    }
+  },
+  {
+    "id": "hs4",
+    "text": "propane smell outside by the tank line",
+    "tags": [
+      "holdout",
+      "safety"
+    ],
+    "expected": {
+      "serviceType": null,
+      "urgency": null,
+      "neighborhood": null,
+      "timeWindow": null,
+      "phone": null,
+      "safety": "gas"
+    }
+  }
+]
